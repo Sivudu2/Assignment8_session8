@@ -1,0 +1,7 @@
+#Create a DatetimeIndex that contains each business day of 2015 and use it to index a
+#Series of random numbers.
+
+import pandas as pd
+import numpy as np
+ind = pd.bdate_range('1/1/2015', '31/12/2015')
+s=pd.Series(np.random.randn(len(ind)), index= ind)

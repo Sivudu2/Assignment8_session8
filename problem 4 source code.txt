@@ -1,0 +1,7 @@
+#Average For each calendar month
+
+import pandas as pd
+import numpy as np
+ind = pd.bdate_range('1/1/2015', '31/12/2015')
+s=pd.Series(np.random.randn(len(ind)), index= ind)
+s.resample('M').mean()

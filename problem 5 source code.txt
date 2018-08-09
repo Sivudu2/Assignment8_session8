@@ -1,0 +1,8 @@
+#For each group of four consecutive calendar months in s, find the date on which the
+#highest value occurred.
+import pandas as pd
+import numpy as np
+ind = pd.bdate_range('1/1/2015', '31/12/2015')
+s=pd.Series(np.random.randn(len(ind)), index= ind)
+fs=s.resample('4M').max()
+fs

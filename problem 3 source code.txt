@@ -1,0 +1,9 @@
+##Find the sum of the values in s for every Wednesday
+
+
+import pandas as pd
+import numpy as np
+ind = pd.bdate_range('1/1/2015', '31/12/2015' , freq = "W-WED")
+s=pd.Series(np.random.randn(len(ind)), index=ind)
+total = s.values.sum()
+total
